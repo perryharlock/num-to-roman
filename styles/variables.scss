@@ -1,0 +1,25 @@
+$white: #ffffff;
+$pure-black: #000000;
+$black: #2c374c;
+$coral: #eb5b5c;
+$grey300: #d8e1e4;
+$grey400: #587074;
+
+$font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-secondary: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// VIEWPORTS
+$min-smalltablet: 576px;
+$min-tablet: 768px;
+$min-laptop: 992px;
+$min-desktop: 1200px;
+$min-hd: 1440px;
+
+// MEDIA QUERIES
+$screen-smalltablet: unquote("min-width: #{$min-smalltablet}");
+$screen-tablet: unquote("min-width: #{$min-tablet}");
+$screen-laptop: unquote("min-width: #{$min-laptop}");
+$screen-desktop: unquote("min-width: #{$min-desktop}");
+$screen-desktop-lg: unquote("min-width: #{$min-hd}");
