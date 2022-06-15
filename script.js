@@ -1,7 +1,13 @@
 const romanNumeralGenerator = (number) => {
-  if (number <=0 || number > 3999 || number === undefined) {
-    return 'Please enter a valid number';
-  };
+  const errorMessage = 'Please enter a valid number';
+  if (number <= 0 || number > 3999 || number === undefined) {
+    if (typeof window === 'undefined') {
+      console.log(errorMessage);
+      return;
+    } else {
+      return errorMessage;
+    }
+  }
 
   const romanNumeralObject = {
     M: 1000,
@@ -27,7 +33,12 @@ const romanNumeralGenerator = (number) => {
       remainingNumber = remainingNumber - romanNumeralObject[romanNumeral];
     }
   }
-  return result;
+  if (typeof window === 'undefined') {
+    console.log(result);
+    return;
+  } else {
+    return result;
+  }
 };
 
 module.exports = romanNumeralGenerator;
