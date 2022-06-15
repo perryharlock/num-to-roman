@@ -1,4 +1,8 @@
 const romanNumeralGenerator = (number) => {
+  if (number <=0 || number > 3999 || number === undefined) {
+    return 'Please enter a valid number';
+  };
+
   const romanNumeralObject = {
     M: 1000,
     CM: 900,
