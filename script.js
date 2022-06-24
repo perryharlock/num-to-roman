@@ -27,12 +27,13 @@ const romanNumeralGenerator = (number) => {
   let result = '';
   let remainingNumber = number;
 
-  for (let romanNumeral in romanNumeralObject) {
+  Object.keys(romanNumeralObject).map(function(romanNumeral) {
     while (remainingNumber >= romanNumeralObject[romanNumeral]) {
       result = result + romanNumeral;
       remainingNumber = remainingNumber - romanNumeralObject[romanNumeral];
-    }
-  }
+    };
+  });
+
   if (typeof window === 'undefined') {
     console.log(result);
     return;
